@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruds</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   
+    <div class="w-50 m-auto">
+        <label for="productName" class="mt-5">productName</label>
+        <input class="form-control my-3" type="text" id="productName" >
+
+        <label for="productPrice">productPrice</label>
+        <input class="form-control my-3" type="text" id="productPrice" >
+
+        <label for="productCat">productCat</label>
+        <input class="form-control my-3" type="text" id="productCat" >
+
+        <label for="productDesc">productDesc</label>
+        <textarea class="form-control my-3" type="text" id="productDesc" >type your opinion</textarea>
+        <button onclick="addProduct();" class="btn btn-success " id="submit" >Add Product</button>
+
+    </div>
+
+    <div class="container">
+        <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="search..." class="form-control my-3">
+        <table class="table">
+            <thead>
+                <th>index</th>
+                <th>Name</th>
+                <th>price</th>
+                <th>category</th>
+                <th>description</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tBody">
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="./js/java.js"></script>
+    
+</body>
+</html>
